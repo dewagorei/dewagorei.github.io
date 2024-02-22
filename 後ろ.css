@@ -242,6 +242,6 @@ section{
         height:  auto;
     }
 }
- h1 {
-     color: white;
- }
+.h1 {
+    color: white;
+}
