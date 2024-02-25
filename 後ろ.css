@@ -18,6 +18,8 @@ header{
     justify-content: space-between;
     padding: 33px 9%;
     background: transparent;
+    font-size: clampe(32px, 4vw, 48px);
+    word-break: keep-all;
 }
 .logo{
     font-size: 30px;
