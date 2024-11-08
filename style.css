@@ -83,6 +83,11 @@ header {
         font-size: 2em;
         cursor: pointer;
     }
+    body {
+    background: linear-gradient(90deg, rgb(4, 34, 169), rgb(4, 166, 56));
+    margin: 0;
+    padding: 0;
+}
 
     .navlist.show {
         display: flex;
