@@ -93,3 +93,8 @@ body {
         padding: 6px 12px;
     }
 }
+body {
+    background: linear-gradient(90deg, rgb(4, 34, 169), rgb(4, 166, 56));
+    margin: 0;
+    padding: 0;
+}
