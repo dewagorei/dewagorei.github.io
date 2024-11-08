@@ -1,42 +1,102 @@
-/* 背景のグラデーション設定 */
+/* 背景と基本設定 */
 body {
-    background: linear-gradient(90deg, rgb(4, 34, 169), rgb(4, 166, 56));
+    font-family: sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
+    background: linear-gradient(90deg, rgb(4, 34, 169), rgb(4, 166, 56));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* テキストスタイル（基本設定） */
-.last, p {
-    font-family: sans-serif;
+/* 見出しのスタイル */
+.last p {
     color: white;
-    font-size: 50px; /* デスクトップ用サイズ */
+    font-size: 2em;
     text-align: center;
-    margin: 20px;
+    margin-top: 20px;
+}
+
+/* テキストコンテンツのスタイル */
+.content p {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 10px 20px;
 }
 
 /* 画像の中央揃え */
 .img {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 20px;
 }
 
-/* スマートフォンやタブレット用のメディアクエリ */
+.img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ボタンのスタイル */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.favorite.styled {
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff5722;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.favorite.styled:hover {
+    background-color: #e64a19;
+}
+
+/* レスポンシブデザイン（画面幅768px以下） */
 @media (max-width: 768px) {
-    .last, p {
-        font-size: 30px; /* モバイル用にフォントサイズを調整 */
+    .last p {
+        font-size: 1.5em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .favorite.styled {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .img img {
+        width: 80%; /* タブレットで画像を画面幅の80%に縮小 */
     }
 }
 
-/* さらに小さい画面サイズ用のメディアクエリ */
+/* スマートフォン向け調整（画面幅480px以下） */
 @media (max-width: 480px) {
-    .last, p {
-        font-size: 20px; /* より小さな画面での最適なサイズ */
+    .last p {
+        font-size: 1.2em;
     }
 
-    /* 画像のサイズ調整 */
+    .content p {
+        font-size: 0.9em;
+    }
+
+    .favorite.styled {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
     .img img {
-        width: 80%; /* モバイルで画像を画面幅の80%に調整 */
-        height: auto;
+        width: 90%; /* モバイルで画像を画面幅の90%に縮小 */
     }
 }
